@@ -11,7 +11,7 @@ struct queue
  
  
 int isEmpty(struct queue *q){
-    if(q->f==-1||q->f>q->r){   // we can also do q->f==q->r==-1
+    if(q->f==1||q->f>q->r){   // we can also do q->f==q->r==-1
         return 1;
     }
     return 0;
@@ -25,7 +25,7 @@ int isFull(struct queue *q){
 }
  
 void enqueue(struct queue *q, int val){
-    if(isFull(q)){
+    if(isFull(q)){ 
         printf("This Queue is full\n");
     }
     else{
@@ -50,7 +50,7 @@ int dequeue(struct queue *q){
 int main(){
     struct queue q;
     q.size = 4;
-    q.f = q.r = 0;
+    q.f = q.r = -1;
     q.arr = (int*) malloc(q.size*sizeof(int));
     
     // Enqueue few elements

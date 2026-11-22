@@ -51,7 +51,7 @@ int dequeue(struct circularQueue *q){
 int main(){
     struct circularQueue q;
     q.size = 4;
-    q.f = q.r = 0;
+    q.f = q.r = -1;
     q.arr = (int*) malloc(q.size*sizeof(int));
     
     // Enqueue few elements
