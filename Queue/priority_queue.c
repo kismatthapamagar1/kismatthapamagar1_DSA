@@ -7,7 +7,7 @@ typedef struct {
     int priority;
 } Element;
 
-typedef struct {
+typedef struct {      //Use of the nested struct function
     Element elements[MAX_SIZE];
     int size;
 } PriorityQueue;
